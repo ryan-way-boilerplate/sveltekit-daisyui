@@ -21,7 +21,8 @@ npx tailwindcss init -p
 npm i -D daisyui@latest
 ```
 
-```tailwind.config.js
+### tailwind.config.js
+```js
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
@@ -34,13 +35,15 @@ export default {
 };
 ```
 
-```./src/app.css
+### ./src/app.css
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
 
-```./src/routes/+layout.svelte
+### ./src/routes/+layout.svelte
+```svelte
 <script>
   import "../app.css";
 </script>
@@ -48,7 +51,8 @@ export default {
 <slot />
 ```
 
-```./src/routes/+page.svelte
+### ./src/routes/+page.svelte
+```svelte
 <h1 class="text-3xl font-bold underline">
   Hello world!
 </h1>
