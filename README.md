@@ -3,6 +3,7 @@
 This project is meant to be a template to quick start my current setup for website development in personal projects
 
 ## Quick Start (now lightweight and telemetry free)
+
 ```
 npx degit ryan-way-boilerplate/sveltekit-daisyui
 ```
@@ -22,20 +23,22 @@ npm i -D daisyui@latest
 ```
 
 ### tailwind.config.js
+
 ```js
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {}
+    extend: {},
   },
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ["dark"]
-  }
+    themes: ['dark'],
+  },
 };
 ```
 
 ### ./src/app.css
+
 ```css
 @tailwind base;
 @tailwind components;
@@ -43,19 +46,19 @@ export default {
 ```
 
 ### ./src/routes/+layout.svelte
+
 ```svelte
 <script>
-  import "../app.css";
+  import '../app.css';
 </script>
 
 <slot />
 ```
 
 ### ./src/routes/+page.svelte
+
 ```svelte
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<h1 class="text-3xl font-bold underline">Hello world!</h1>
 
 <style lang="postcss">
   :global(html) {
